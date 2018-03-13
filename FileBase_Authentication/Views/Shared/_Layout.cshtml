@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+
+    <script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyDyplkZNNLxHXIIS-qfWviIoh-64XIcEDg",
+            authDomain: "api-project-86230164980.firebaseapp.com",
+            databaseURL: "https://api-project-86230164980.firebaseio.com",
+            projectId: "api-project-86230164980",
+            storageBucket: "api-project-86230164980.appspot.com",
+            messagingSenderId: "86230164980"
+        };
+        firebase.initializeApp(config);
+    </script>
+</head>
+<body>
+
+    
+    <div class="container body-content">
+        <h4 class="text-center">
+            <a href="/Home/Index">Go to home page</a>
+        </h4>
+        <hr />
+        @RenderBody()
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
